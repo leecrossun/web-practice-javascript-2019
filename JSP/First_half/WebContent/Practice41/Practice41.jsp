@@ -1,0 +1,82 @@
+<!--문헌정보학과 20170581 이효선
+         웹브라우저 : 크롬 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.util.*" %>
+<%@ page import = "java.util.Enumeration" %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Practice41</title>
+</head>
+<body>
+id : ${param.id}<br>
+pw : ${param.pw}<br>
+gender : ${param.gender}<br>
+phone1 : ${param.phone}<br>
+phone2 : ${param.phone2}<br>
+phone3 : ${param.phone3}<br>
+email : ${param.email}<br>
+birth : ${param.birth}<br>
+<c:forEach var="h" items="${paramValues.hobby}">
+	${h}/
+</c:forEach><br>
+memo : ${param.memo}<br>
+
+<hr><h1>Processing Parameters</h1>
+<c:set value="${param.phone}" var="phone" />
+<c:set value="${param.gender}" var="gender" />
+<c:set value="${paramValues.hobby}" var="hobby" />
+id : ${param.id}<br>
+pw : ${param.pw}<br>
+
+gender : 
+<c:if test="${gender == '0'}">
+남
+</c:if>
+<c:if test="${gender == '1'}">
+여
+</c:if><br>
+
+phone1 : 
+<c:if test="${phone == '0'}">
+010
+</c:if>
+<c:if test="${phone == '1'}">
+011
+</c:if>
+<c:if test="${phone == '2'}">
+017
+</c:if>
+<c:if test="${phone == '3'}">
+070
+</c:if><br>
+phone2 : ${param.phone2}<br>
+phone3 : ${param.phone3}<br>
+email : ${param.email}<br>
+birth : ${param.birth}<br>
+
+hobby : 
+<c:forEach var="h" items="${paramValues.hobby}">
+	<c:if test="${h == '0'}">
+		뉴스/
+	</c:if>
+	<c:if test="${h == '1'}">
+		맛집/
+	</c:if>
+	<c:if test="${h == '2'}">
+		책/
+	</c:if>
+	<c:if test="${h == '3'}">
+		영화/
+	</c:if>
+	<c:if test="${h == '4'}">
+		여행/
+	</c:if>
+</c:forEach><br>
+memo : ${param.memo}<br>
+</body>
+</html>

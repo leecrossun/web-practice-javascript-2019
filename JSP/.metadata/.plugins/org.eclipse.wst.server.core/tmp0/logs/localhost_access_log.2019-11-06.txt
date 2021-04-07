@@ -1,0 +1,7 @@
+127.0.0.1 - - [06/Nov/2019:19:18:01 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [06/Nov/2019:19:18:02 +0900] "GET /First_half/Practice20/login.jsp HTTP/1.1" 200 2130
+0:0:0:0:0:0:0:1 - - [06/Nov/2019:19:18:02 +0900] "GET /First_half/Practice20/image/eclass_logo.png HTTP/1.1" 200 5784
+0:0:0:0:0:0:0:1 - - [06/Nov/2019:19:18:02 +0900] "GET /First_half/Practice20/image/eclass_title.jpg HTTP/1.1" 200 30916
+0:0:0:0:0:0:0:1 - - [06/Nov/2019:19:18:14 +0900] "POST /First_half/Practice20/result.jsp HTTP/1.1" 200 374
+0:0:0:0:0:0:0:1 - - [06/Nov/2019:19:18:43 +0900] "GET /First_half/Practice18/Calendar.jsp HTTP/1.1" 200 667
+0:0:0:0:0:0:0:1 - - [06/Nov/2019:19:18:51 +0900] "GET /First_half/Practice18/include_action.jsp HTTP/1.1" 200 1350

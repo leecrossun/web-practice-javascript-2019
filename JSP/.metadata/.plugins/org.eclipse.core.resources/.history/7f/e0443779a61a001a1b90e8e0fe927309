@@ -1,0 +1,61 @@
+package jspbook.pr43;
+
+public class LoginBean {
+	
+	// 멤버변수
+	String id;
+	String pw;
+	Integer gender;
+	String email;
+	String birth;
+	int year;
+	public LoginBean() {}
+	public LoginBean(String id, String pw, Integer gender, String email, String birth, int year) {
+		this.id = id;
+		this.pw = pw;
+		this.gender = gender;
+		this.email = email;
+		this.birth = birth;
+		String[] dArray = birth.split("-");
+		year = 0;
+		int i;
+		for( i = 0; i < dArray.length-1; i++)
+		{
+			year += Integer.parseInt(dArray[i]) * 10;
+		}
+		year = Integer.parseInt(dArray[i-1]);
+	}
+//getter, setter
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPw() {
+		return pw;
+	}
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+	public Integer getGender() {
+		return gender;
+	}
+	public void setGender(Integer gender) {
+		this.gender = gender;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	
+
+}

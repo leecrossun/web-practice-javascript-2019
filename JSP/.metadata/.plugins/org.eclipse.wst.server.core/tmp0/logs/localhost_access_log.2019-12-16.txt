@@ -1,0 +1,5 @@
+127.0.0.1 - - [16/Dec/2019:17:10:06 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [16/Dec/2019:17:10:07 +0900] "GET /First_half/Practice47/Practice47.jsp HTTP/1.1" 200 3466
+0:0:0:0:0:0:0:1 - - [16/Dec/2019:17:10:25 +0900] "POST /First_half/Practice47/Practice47.jsp HTTP/1.1" 200 3553
+0:0:0:0:0:0:0:1 - - [16/Dec/2019:17:10:36 +0900] "POST /First_half/Practice47/Practice47.jsp HTTP/1.1" 200 3619
+0:0:0:0:0:0:0:1 - - [16/Dec/2019:17:10:48 +0900] "POST /First_half/Practice47/Practice47.jsp HTTP/1.1" 200 3689

@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="jspbook.pr45.*"%>
+<!DOCTYPE html>
+<jsp:useBean id="am" class="jspbook.pr45.AddrManager" scope="application"/>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<h2>주소록(전체보기)</h2>
+<hr>
+<a href="addr_form.jsp">주소추가</a>
+<%
+	int rpp = 2;
+	int currentPage;
+	String sindex = request.getParameter("sindex");
+	System.out.println("sindex~" + sindex);
+	
+	
+	
+	if(sindex == null){
+		currentPage = 1;
+	}
+	else{
+		currentPage = Integer.parseInt(sindex);
+		System.out.println("현재~" + currentPage);
+	}
+	
+	int startIndex = 1;
+	int lastIndex;
+	
+	int allPage;
+	
+	
+	int allSize = am.getAddrList().size();
+	System.out.println("사이즈~" + allSize);
+	
+	if(allSize % rpp == 0){
+		allPage = allSize / rpp;
+		lastIndex = 0;
+		System.out.println("배수 : " + rpp);
+	}
+	else if(allSize % rpp == 1){
+		allPage = allSize / rpp + 1;
+		System.out.println("배수 아님 ");
+		lastIndex = 1;
+		//request.getAttribute(Integer.toString(li))
+	}
+	else if(allSize == 1){
+		lastIndex = 1;
+		allPage = 1;
+	}
+	
+// 	if(currentPage == allPage){
+// 		lastIndex = allPage;
+// 	}
+// 	else if((currentPage + 4) >= allPage) {
+// 		lastIndex = allPage;
+// 	}
+// 	else {
+// 		lastIndex = allPage + 4;
+// 	}
+%>
+
+<table border="1" width="500">
+	<tr>
+		<td>이름</td><td>전화번호</td><td>이메일</td><td>성별</td><td>그룹</td>
+	</tr>
+	<%
+		int alal = 0;
+		for(alal = (currentPage - 1); alal < ((currentPage - 1) + rpp); alal++){
+			System.out.println("alal" + alal);
+	%>
+	<tr>
+		<td><%=am.getAddrList().get(alal).getUsername()%></td>
+		<td><%=am.getAddrList().get(alal).getTel() %></td>
+		<td><%=am.getAddrList().get(alal).getEmail() %></td>
+		<td><%=am.getAddrList().get(alal).getSex() %></td>
+		<td><%=am.getAddrList().get(alal).getGroup() %></td>
+	<%
+			if(lastIndex == 1){
+				break;
+			}
+		}
+		
+	%>
+	
+	</tr>
+</table>
+
+<%
+	for(int li = 1; li <= allPage; li++){
+		out.println("<a href=\"Addr_list.jsp?sindex="+ li + "\">" 
+				+ li + "</a>");
+	}
+%>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+127.0.0.1 - - [12/Oct/2019:18:15:34 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Oct/2019:18:15:36 +0900] "GET /First_half/Practice10/Practice10.jsp HTTP/1.1" 200 1090
+0:0:0:0:0:0:0:1 - - [12/Oct/2019:18:15:44 +0900] "GET /First_half/Practice10/Practice10.jsp HTTP/1.1" 200 1090
+0:0:0:0:0:0:0:1 - - [12/Oct/2019:18:15:45 +0900] "GET /favicon.ico HTTP/1.1" 404 973

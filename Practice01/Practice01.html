@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--문헌정보학과 20170581 이효선
+    웹브라우저 최적화 : 크롬 브라우저-->
+    <meta charset="UTF-8">
+    <title>컴퓨터학과 2학년 시간표</title>
+    <style>
+        table, td{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        td{
+            width:80px;
+            height: 50px;
+            text-align: center;
+        }
+        #main{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        #majer_essential{
+            background-color:#ffdf90;
+            font-size:13px;
+        }
+        #majer_selection{
+            background-color:#b4cbff; 
+            font-size:13px;
+        }
+        #refinement{
+            background-color:#bebbc4; 
+            font-size:13px;
+        }
+        #service{
+            font-size:13px;
+        }
+    </style>
+</head>
+<body>
+   <div align="center">
+    <a id="main">강의 시간표</a><br><br>
+   <table>
+        <tr id="main">
+            <td>2학년</td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td>
+        </tr>
+        <tr>
+            <td id="main">1</td>
+            <td></td>
+            <td id="majer_essential" rowspan="2">자료구조</td>
+            <td id="majer_essential">네트워크</td>
+            <td></td>
+            <td id="majer_essential">네트워크</td>
+        </tr>
+         <tr>
+            <td id="main">2</td>
+            <td id="majer_essential" rowspan="2">데이터베이스개론</td>
+            <td></td>
+            <td></td>
+            <td id="majer_selection">운영체제</td>
+        </tr>
+         <tr>
+            <td id="main">3</td>
+            <td></td>
+            <td id="majer_selection">운영체제</td>
+            <td></td>
+            <td id="service" rowspan="4">사회봉사</td>
+        </tr>
+         <tr>
+            <td id="main">4</td>
+            <td id="majer_selection" rowspan="2">웹프로그래밍</td>
+            <td id="refinement">창의와감성</td>
+            <td></td>
+            <td id="refinement">창의와감성</td>
+        </tr>
+         <tr>
+            <td id="main">5</td>
+            <td></td>
+            <td></td>
+            <td id="majer_selection" rowspan="2">소프트웨어프로그래밍</td>
+        </tr>
+         <tr>
+            <td id="main">6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+   </table>
+   </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\WebPro20192\WebProjectA_45\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2455420660.index
+687944633.index
+2931865911.index
+231199581.index
+3012341459.index
+2539466870.index
+528158105.index
